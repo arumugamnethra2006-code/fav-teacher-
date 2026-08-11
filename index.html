@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Yasmeen Ma'am 🌷</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Georgia,"Times New Roman",serif;
+    background:linear-gradient(135deg,#fff8f3,#f8e2eb,#e9e1f7);
+    color:#513746;
+}
+
+.screen{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px 15px;
+    text-align:center;
+}
+
+.hidden{
+    display:none!important;
+}
+
+.fade{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card{
+    width:min(850px,95%);
+    background:rgba(255,255,255,.91);
+    padding:38px 26px;
+    border-radius:32px;
+    box-shadow:0 20px 60px rgba(90,50,70,.17);
+}
+
+.flower{
+    font-size:52px;
+}
+
+h1{
+    font-size:clamp(45px,10vw,78px);
+    color:#70445d;
+    margin:10px 0;
+}
+
+h2{
+    color:#70445d;
+    font-size:31px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.9;
+}
+
+.subtitle{
+    font-size:21px;
+    font-style:italic;
+}
+
+button{
+    border:0;
+    padding:14px 27px;
+    margin:9px;
+    border-radius:35px;
+    background:#a76683;
+    color:white;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 7px 18px rgba(100,50,75,.15);
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.03);
+    background:#824f68;
+}
+
+.question{
+    font-size:26px;
+    font-weight:bold;
+    color:#70445d;
+    margin:28px 0;
+}
+
+.response{
+    margin-top:20px;
+    font-size:19px;
+}
+
+.letter{
+    text-align:left;
+    background:#fffafa;
+    padding:28px;
+    border-radius:25px;
+    margin-top:20px;
+}
+
+.highlight{
+    font-size:23px;
+    color:#8a506b;
+    font-style:italic;
+}
+
+.big{
+    font-size:22px;
+    font-weight:bold;
+    color:#70445d;
+}
+
+.art{
+    width:min(680px,100%);
+    margin:25px auto;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(80,45,65,.2);
+}
+
+.art svg{
+    display:block;
+    width:100%;
+}
+
+.signature{
+    font-size:24px;
+    font-style:italic;
+    margin-top:30px;
+}
+
+.heart{
+    font-size:38px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1 -->
+
+<section class="screen fade" id="screen1">
+
+<div class="card">
+
+<div class="flower">🌷</div>
+
+<p class="subtitle">
+A tiny surprise for someone very special...
+</p>
+
+<h1>Yasmeen Ma'am</h1>
+
+<p>
+There are some people who become special
+to us without even trying.
+</p>
+
+<p>
+And somehow, Ma'am...
+</p>
+
+<p class="highlight">
+You became one of those people for me. 🤍
+</p>
+
+<button onclick="go('screen1','screen2')">
+Come closer, Ma'am... 🌸
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section class="screen hidden" id="screen2">
+
+<div class="card">
+
+<div class="heart">🥹❤️</div>
+
+<h2>Ma'am, one very important question...</h2>
+
+<div class="question">
+Do I love you?
+</div>
+
+<button onclick="yesLove()">
+YES ❤️
+</button>
+
+<button onclick="noLove()">
+NO 😌
+</button>
+
+<div id="loveResponse"></div>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section class="screen hidden" id="screen3">
+
+<div class="card">
+
+<div class="heart">🌷❤️</div>
+
+<h2>Okayyy... then tell me this.</h2>
+
+<div class="question">
+HOW MUCH do I love you?
+</div>
+
+<button onclick="chooseLove()">
+A little 🤏
+</button>
+
+<button onclick="chooseLove()">
+A lot ❤️
+</button>
+
+<button onclick="chooseLove()">
+More than I can explain 🌷
+</button>
+
+<button onclick="chooseLove()">
+More than you probably know 🥹
+</button>
+
+<div id="amountResponse"></div>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 4 -->
+
+<section class="screen hidden" id="screen4">
+
+<div class="card">
+
+<div class="flower">🌸</div>
+
+<h2>Now let me tell you why...</h2>
+
+
+<!-- TEACHER + STUDENT PICTURE BUILT INTO CODE -->
+
+<div class="art">
+
+<svg viewBox="0 0 800 560"
+xmlns="http://www.w3.org/2000/svg">
+
+<!-- classroom background -->
+
+<rect width="800"
+height="560"
+fill="#fff0f1"/>
+
+<!-- window -->
+
+<rect x="65"
+y="55"
+width="200"
+height="245"
+rx="18"
+fill="#f7dce1"/>
+
+<line x1="165"
+y1="55"
+x2="165"
+y2="300"
+stroke="#e2b8c0"
+stroke-width="9"/>
+
+<line x1="65"
+y1="178"
+x2="265"
+y2="178"
+stroke="#e2b8c0"
+stroke-width="9"/>
+
+<!-- flowers outside -->
+
+<circle cx="105"
+cy="105"
+r="17"
+fill="#d98ca6"/>
+
+<circle cx="220"
+cy="125"
+r="15"
+fill="#b99bd0"/>
+
+<circle cx="125"
+cy="230"
+r="14"
+fill="#d98ca6"/>
+
+<!-- books -->
+
+<rect x="570"
+y="350"
+width="145"
+height="24"
+rx="6"
+fill="#d9a2b3"/>
+
+<rect x="585"
+y="325"
+width="130"
+height="24"
+rx="6"
+fill="#bda2d4"/>
+
+<rect x="600"
+y="300"
+width="115"
+height="24"
+rx="6"
+fill="#e2bb72"/>
+
+<!-- floor -->
+
+<ellipse cx="400"
+cy="490"
+rx="310"
+ry="34"
+fill="#dfc3b4"/>
+
+
+<!-- TEACHER BODY -->
+
+<path d="M105 475
+C120 355 155 270 235 245
+C320 218 395 255 415 350
+L430 475Z"
+fill="#c997b1"/>
+
+<!-- saree border -->
+
+<path d="M125 455
+L415 455"
+stroke="#e5c27a"
+stroke-width="13"/>
+
+<!-- teacher neck -->
+
+<rect x="220"
+y="180"
+width="68"
+height="75"
+rx="22"
+fill="#b97966"/>
+
+<!-- teacher face -->
+
+<circle cx="255"
+cy="145"
+r="78"
+fill="#bd7a66"/>
+
+<!-- teacher hair -->
+
+<path d="M180 150
+C165 85 215 48 270 65
+C330 83 345 135 315 190
+C300 140 275 105 230 112
+C205 120 195 140 180 150Z"
+fill="#30231f"/>
+
+<!-- jasmine -->
+
+<circle cx="306"
+cy="95"
+r="10"
+fill="#fffdf8"/>
+
+<circle cx="320"
+cy="108"
+r="10"
+fill="#fffdf8"/>
+
+<circle cx="333"
+cy="121"
+r="10"
+fill="#fffdf8"/>
+
+<!-- bindi -->
+
+<circle cx="255"
+cy="116"
+r="7"
+fill="#a52e4a"/>
+
+<!-- teacher eyes -->
+
+<circle cx="225"
+cy="145"
+r="5"
+fill="#34231e"/>
+
+<circle cx="285"
+cy="145"
+r="5"
+fill="#34231e"/>
+
+<!-- teacher smile -->
+
+<path d="M225 174
+Q255 198 288 174"
+fill="none"
+stroke="#713f3a"
+stroke-width="5"
+stroke-linecap="round"/>
+
+
+<!-- STUDENT BODY -->
+
+<path d="M405 475
+C410 360 435 285 500 260
+C575 235 650 275 680 350
+L700 475Z"
+fill="#b6a0d4"/>
+
+<!-- student neck -->
+
+<rect x="480"
+y="205"
+width="58"
+height="65"
+rx="18"
+fill="#bd7a66"/>
+
+<!-- student face -->
+
+<circle cx="510"
+cy="160"
+r="67"
+fill="#bd7a66"/>
+
+<!-- student hair -->
+
+<path d="M442 160
+C435 95 475 65 525 80
+C580 95 595 150 560 215
+C540 165 535 125 500 120
+C475 120 455 140 442 160Z"
+fill="#30231f"/>
+
+<!-- student eyes -->
+
+<circle cx="485"
+cy="158"
+r="4"
+fill="#34231e"/>
+
+<circle cx="535"
+cy="158"
+r="4"
+fill="#34231e"/>
+
+<!-- student smile -->
+
+<path d="M485 184
+Q510 202 535 184"
+fill="none"
+stroke="#713f3a"
+stroke-width="4"
+stroke-linecap="round"/>
+
+
+<!-- teacher arm -->
+
+<path d="M335 285
+C385 260 435 240 490 220"
+fill="none"
+stroke="#bd7a66"
+stroke-width="23"
+stroke-linecap="round"/>
+
+<!-- student hand -->
+
+<path d="M420 310
+C380 290 350 280 320 275"
+fill="none"
+stroke="#bd7a66"
+stroke-width="18"
+stroke-linecap="round"/>
+
+<!-- books between them -->
+
+<rect x="300"
+y="345"
+width="190"
+height="27"
+rx="7"
+fill="#d9a2b3"/>
+
+<rect x="320"
+y="317"
+width="170"
+height="27"
+rx="7"
+fill="#c3a5d5"/>
+
+<!-- heart -->
+
+<path d="M390 78
+C370 48 330 66 345 98
+L390 138
+L435 98
+C450 66 410 48 390 78Z"
+fill="#d9809a"/>
+
+<!-- stars -->
+
+<text x="90"
+y="390"
+font-size="35">✨</text>
+
+<text x="690"
+y="145"
+font-size="30">✨</text>
+
+<text x="635"
+y="210"
+font-size="25">✦</text>
+
+</svg>
+
+</div>
+
+
+<div class="letter">
+
+<p>
+<b>Dear Yasmeen Ma'am,</b>
+</p>
+
+<p>
+I don't think I've ever properly told you
+how special you are to me.
+</p>
+
+<p>
+You're my teacher, yes...
+</p>
+
+<p class="highlight">
+But somehow, you never made me feel like
+you were just my teacher.
+</p>
+
+<p>
+The way you talk to me so freely,
+the way I can share things with you,
+and the way we can talk about almost
+anything and everything...
+</p>
+
+<p>
+Sometimes it genuinely feels like
+I'm talking to a friend. 🤍
+</p>
+
+<p>
+And Ma'am, I don't think you realise
+how much that means to me.
+</p>
+
+<p>
+Sometimes it's something as simple as
+seeing your face in college.
+</p>
+
+<p>
+Or seeing that smile.
+</p>
+
+<p class="highlight">
+Or just hearing your “Hi”.
+</p>
+
+<p>
+Somehow, that tiny little “Hi”
+can change my whole mood
+and make my day better.
+</p>
+
+<p class="big">
+I don't know how you do that. 🥹
+</p>
+
+<p>
+I just know that seeing you makes me happy.
+</p>
+
+</div>
+
+<button onclick="go('screen4','screen5')">
+There's more... 🌷
+</button>
+
+</div>
+
+</section>
+
+
+<!-- SCREEN 5 -->
+
+<section class="screen hidden" id="screen5">
+
+<div class="card">
+
+<div class="heart">🥹🌷</div>
+
+<h2>You became special without even knowing it.</h2>
+
+<div class="letter">
+
+<p>
+There are some people we meet in life
+who leave a little warmth behind
+wherever they go.
+</p>
+
+<p class="highlight">
+You're that person for me, Ma'am.
+</p>
+
+<p>
+You've made college feel a little happier,
+a little more comfortable,
+and a lot more memorable.
+</p>
+
+<p>
+Maybe one day I'll graduate and leave college.
+</p>
+
+<p>
+I'll meet new people,
+start working,
+get busy with life,
+and move into another chapter.
+</p>
+
+<p>
+But I know there will always be
+a little part of me that remembers:
+</p>
+
+<p class="big">
+“There was this one teacher who made me
+genuinely happy just by being there.” ❤️
+</p>
+
+<p>
+That's you, Ma'am.
+</p>
+
+<p>
+Thank you for talking to me like a friend.
+</p>
+
+<p>
+Thank you for letting me be myself around you.
+</p>
+
+<p>
+Thank you for listening.
+</p>
+
+<p>
+Thank you for all the little conversations
+that you probably don't even remember,
+but I do.
+</p>
+
+</div>
+
+<button onclick="go('screen5','screen6')">
+One last thing, Ma'am... 🤍
+</button>
+
+</div>
+
+</section>
+
+
+<!-- FINAL SCREEN -->
+
+<section class="screen hidden" id="screen6">
+
+<div class="card">
+
+<div class="flower">🌷</div>
+
+<h1>Thank You, Ma'am ❤️</h1>
+
+<div class="letter">
+
+<p>
+I don't need a special occasion
+to tell you this.
+</p>
+
+<p>
+I just wanted you to know that
+you are deeply loved and appreciated
+by at least one student who is going
+to remember you for a very, very long time.
+</p>
+
+<p class="highlight">
+Thank you for being you.
+</p>
+
+<p>
+And if you ever have a bad day,
+remember that somewhere in college,
+there is a student who sees your smile
+and thinks:
+</p>
+
+<p class="big">
+“Okay... today is going to be
+a little better.” 🥹❤️
+</p>
+
+<p>
+You probably don't realise how much
+your presence means to me.
+</p>
+
+<p>
+But I hope this little surprise
+makes you smile today.
+</p>
+
+<p class="big">
+Love you always, Ma'am. 🌷
+</p>
+
+</div>
+
+<p class="signature">
+— One very lucky student 🤍
+</p>
+
+<div class="heart">
+🌸❤️🌸
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+function go(current,next){
+
+document.getElementById(current)
+.classList.add("hidden");
+
+document.getElementById(next)
+.classList.remove("hidden");
+
+document.getElementById(next)
+.classList.add("fade");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+function yesLove(){
+
+document.getElementById("loveResponse").innerHTML=`
+
+<p>
+🥹❤️ Obviouslyyy!
+</p>
+
+<p>
+But now comes the difficult question...
+</p>
+
+<button onclick="go('screen2','screen3')">
+Okay, tell me how much... 🌷
+</button>
+
+`;
+
+}
+
+function noLove(){
+
+document.getElementById("loveResponse").innerHTML=`
+
+<p>
+Ma'ammm... nice try. 😂
+</p>
+
+<p>
+I'm not accepting that answer.
+</p>
+
+<button onclick="go('screen2','screen3')">
+Try again ❤️
+</button>
+
+`;
+
+}
+
+function chooseLove(){
+
+document.getElementById("amountResponse").innerHTML=`
+
+<p>
+🥹❤️ Whatever answer you chose...
+</p>
+
+<p>
+I don't think there is really
+an option big enough.
+</p>
+
+<p class="highlight">
+Now let me tell you why you're so special to me.
+</p>
+
+<button onclick="go('screen3','screen4')">
+Read this, Ma'am... 🌷
+</button>
+
+}
+
+</script>
+
+</body>
+</html>
