@@ -3,13 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Yasmeen Ma'am 🌷</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
     margin:0;
@@ -28,36 +25,24 @@ body{
     text-align:center;
 }
 
-.hidden{
-    display:none!important;
-}
+.hidden{display:none!important}
 
-.fade{
-    animation:fadeIn 1s ease;
-}
+.fade{animation:fadeIn 1s ease}
 
 @keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    from{opacity:0;transform:translateY(25px)}
+    to{opacity:1;transform:translateY(0)}
 }
 
 .card{
     width:min(850px,95%);
-    background:rgba(255,255,255,.91);
+    background:rgba(255,255,255,.93);
     padding:38px 26px;
     border-radius:32px;
     box-shadow:0 20px 60px rgba(90,50,70,.17);
 }
 
-.flower{
-    font-size:52px;
-}
+.flower{font-size:52px}
 
 h1{
     font-size:clamp(45px,10vw,78px);
@@ -106,11 +91,6 @@ button:hover{
     margin:28px 0;
 }
 
-.response{
-    margin-top:20px;
-    font-size:19px;
-}
-
 .letter{
     text-align:left;
     background:#fffafa;
@@ -131,6 +111,8 @@ button:hover{
     color:#70445d;
 }
 
+.heart{font-size:38px}
+
 .art{
     width:min(680px,100%);
     margin:25px auto;
@@ -150,18 +132,73 @@ button:hover{
     margin-top:30px;
 }
 
-.heart{
-    font-size:38px;
+.memory{
+    background:#fffafa;
+    padding:22px;
+    border-radius:22px;
+    margin:15px 0;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 18px rgba(90,50,70,.08);
+}
+
+.memory:hover{
+    transform:translateY(-4px);
+}
+
+.memory p{
+    margin:5px 0;
+}
+
+.reveal{
+    display:none;
+    color:#8a506b;
+    font-style:italic;
+}
+
+.memory.open .reveal{
+    display:block;
+}
+
+.choice{
+    background:#fffafa;
+    border:2px solid #efd5df;
+    color:#70445d;
+    margin:8px;
+}
+
+.choice:hover{
+    background:#f8e5ec;
+    color:#70445d;
+}
+
+.result{
+    min-height:40px;
+    margin-top:15px;
+    font-size:19px;
+    color:#8a506b;
+    font-style:italic;
+}
+
+.warning{
+    font-size:23px;
+    line-height:1.8;
+}
+
+.promise{
+    background:linear-gradient(135deg,#fff4f7,#f7eefb);
+    padding:30px;
+    border-radius:28px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- SCREEN 1 -->
+
+<!-- SCREEN 1 : ORIGINAL -->
 
 <section class="screen fade" id="screen1">
-
 <div class="card">
 
 <div class="flower">🌷</div>
@@ -190,14 +227,12 @@ Come closer, Ma'am... 🌸
 </button>
 
 </div>
-
 </section>
 
 
-<!-- SCREEN 2 -->
+<!-- SCREEN 2 : ORIGINAL -->
 
 <section class="screen hidden" id="screen2">
-
 <div class="card">
 
 <div class="heart">🥹❤️</div>
@@ -208,25 +243,18 @@ Come closer, Ma'am... 🌸
 Do I love you?
 </div>
 
-<button onclick="yesLove()">
-YES ❤️
-</button>
-
-<button onclick="noLove()">
-NO 😌
-</button>
+<button onclick="yesLove()">YES ❤️</button>
+<button onclick="noLove()">NO 😌</button>
 
 <div id="loveResponse"></div>
 
 </div>
-
 </section>
 
 
-<!-- SCREEN 3 -->
+<!-- SCREEN 3 : ORIGINAL -->
 
 <section class="screen hidden" id="screen3">
-
 <div class="card">
 
 <div class="heart">🌷❤️</div>
@@ -237,126 +265,59 @@ NO 😌
 HOW MUCH do I love you?
 </div>
 
-<button onclick="chooseLove()">
-A little 🤏
-</button>
-
-<button onclick="chooseLove()">
-A lot ❤️
-</button>
-
-<button onclick="chooseLove()">
-More than I can explain 🌷
-</button>
-
-<button onclick="chooseLove()">
-More than you probably know 🥹
-</button>
+<button onclick="chooseLove()">A little 🤏</button>
+<button onclick="chooseLove()">A lot ❤️</button>
+<button onclick="chooseLove()">More than I can explain 🌷</button>
+<button onclick="chooseLove()">More than you probably know 🥹</button>
 
 <div id="amountResponse"></div>
 
 </div>
-
 </section>
 
 
-<!-- SCREEN 4 -->
+<!-- SCREEN 4 : ORIGINAL TEACHER + STUDENT + ORIGINAL MESSAGE -->
 
 <section class="screen hidden" id="screen4">
-
 <div class="card">
 
 <div class="flower">🌸</div>
 
 <h2>Now let me tell you why...</h2>
 
-
-<!-- TEACHER + STUDENT PICTURE BUILT INTO CODE -->
-
 <div class="art">
 
-<svg viewBox="0 0 800 560"
-xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg">
 
-<!-- classroom background -->
+<rect width="800" height="560" fill="#fff0f1"/>
 
-<rect width="800"
-height="560"
-fill="#fff0f1"/>
+<rect x="65" y="55" width="200" height="245"
+rx="18" fill="#f7dce1"/>
 
-<!-- window -->
+<line x1="165" y1="55" x2="165" y2="300"
+stroke="#e2b8c0" stroke-width="9"/>
 
-<rect x="65"
-y="55"
-width="200"
-height="245"
-rx="18"
-fill="#f7dce1"/>
+<line x1="65" y1="178" x2="265" y2="178"
+stroke="#e2b8c0" stroke-width="9"/>
 
-<line x1="165"
-y1="55"
-x2="165"
-y2="300"
-stroke="#e2b8c0"
-stroke-width="9"/>
+<circle cx="105" cy="105" r="17" fill="#d98ca6"/>
+<circle cx="220" cy="125" r="15" fill="#b99bd0"/>
+<circle cx="125" cy="230" r="14" fill="#d98ca6"/>
 
-<line x1="65"
-y1="178"
-x2="265"
-y2="178"
-stroke="#e2b8c0"
-stroke-width="9"/>
+<rect x="570" y="350" width="145" height="24"
+rx="6" fill="#d9a2b3"/>
 
-<!-- flowers outside -->
+<rect x="585" y="325" width="130" height="24"
+rx="6" fill="#bda2d4"/>
 
-<circle cx="105"
-cy="105"
-r="17"
-fill="#d98ca6"/>
+<rect x="600" y="300" width="115" height="24"
+rx="6" fill="#e2bb72"/>
 
-<circle cx="220"
-cy="125"
-r="15"
-fill="#b99bd0"/>
-
-<circle cx="125"
-cy="230"
-r="14"
-fill="#d98ca6"/>
-
-<!-- books -->
-
-<rect x="570"
-y="350"
-width="145"
-height="24"
-rx="6"
-fill="#d9a2b3"/>
-
-<rect x="585"
-y="325"
-width="130"
-height="24"
-rx="6"
-fill="#bda2d4"/>
-
-<rect x="600"
-y="300"
-width="115"
-height="24"
-rx="6"
-fill="#e2bb72"/>
-
-<!-- floor -->
-
-<ellipse cx="400"
-cy="490"
-rx="310"
-ry="34"
+<ellipse cx="400" cy="490" rx="310" ry="34"
 fill="#dfc3b4"/>
 
 
-<!-- TEACHER BODY -->
+<!-- TEACHER -->
 
 <path d="M105 475
 C120 355 155 270 235 245
@@ -364,30 +325,14 @@ C320 218 395 255 415 350
 L430 475Z"
 fill="#c997b1"/>
 
-<!-- saree border -->
+<path d="M125 455 L415 455"
+stroke="#e5c27a" stroke-width="13"/>
 
-<path d="M125 455
-L415 455"
-stroke="#e5c27a"
-stroke-width="13"/>
+<rect x="220" y="180" width="68" height="75"
+rx="22" fill="#b97966"/>
 
-<!-- teacher neck -->
-
-<rect x="220"
-y="180"
-width="68"
-height="75"
-rx="22"
-fill="#b97966"/>
-
-<!-- teacher face -->
-
-<circle cx="255"
-cy="145"
-r="78"
+<circle cx="255" cy="145" r="78"
 fill="#bd7a66"/>
-
-<!-- teacher hair -->
 
 <path d="M180 150
 C165 85 215 48 270 65
@@ -396,53 +341,21 @@ C300 140 275 105 230 112
 C205 120 195 140 180 150Z"
 fill="#30231f"/>
 
-<!-- jasmine -->
+<circle cx="306" cy="95" r="10" fill="#fffdf8"/>
+<circle cx="320" cy="108" r="10" fill="#fffdf8"/>
+<circle cx="333" cy="121" r="10" fill="#fffdf8"/>
 
-<circle cx="306"
-cy="95"
-r="10"
-fill="#fffdf8"/>
+<circle cx="255" cy="116" r="7" fill="#a52e4a"/>
 
-<circle cx="320"
-cy="108"
-r="10"
-fill="#fffdf8"/>
+<circle cx="225" cy="145" r="5" fill="#34231e"/>
+<circle cx="285" cy="145" r="5" fill="#34231e"/>
 
-<circle cx="333"
-cy="121"
-r="10"
-fill="#fffdf8"/>
-
-<!-- bindi -->
-
-<circle cx="255"
-cy="116"
-r="7"
-fill="#a52e4a"/>
-
-<!-- teacher eyes -->
-
-<circle cx="225"
-cy="145"
-r="5"
-fill="#34231e"/>
-
-<circle cx="285"
-cy="145"
-r="5"
-fill="#34231e"/>
-
-<!-- teacher smile -->
-
-<path d="M225 174
-Q255 198 288 174"
-fill="none"
-stroke="#713f3a"
-stroke-width="5"
-stroke-linecap="round"/>
+<path d="M225 174 Q255 198 288 174"
+fill="none" stroke="#713f3a"
+stroke-width="5" stroke-linecap="round"/>
 
 
-<!-- STUDENT BODY -->
+<!-- STUDENT -->
 
 <path d="M405 475
 C410 360 435 285 500 260
@@ -450,23 +363,11 @@ C575 235 650 275 680 350
 L700 475Z"
 fill="#b6a0d4"/>
 
-<!-- student neck -->
+<rect x="480" y="205" width="58" height="65"
+rx="18" fill="#bd7a66"/>
 
-<rect x="480"
-y="205"
-width="58"
-height="65"
-rx="18"
+<circle cx="510" cy="160" r="67"
 fill="#bd7a66"/>
-
-<!-- student face -->
-
-<circle cx="510"
-cy="160"
-r="67"
-fill="#bd7a66"/>
-
-<!-- student hair -->
 
 <path d="M442 160
 C435 95 475 65 525 80
@@ -475,63 +376,28 @@ C540 165 535 125 500 120
 C475 120 455 140 442 160Z"
 fill="#30231f"/>
 
-<!-- student eyes -->
+<circle cx="485" cy="158" r="4" fill="#34231e"/>
+<circle cx="535" cy="158" r="4" fill="#34231e"/>
 
-<circle cx="485"
-cy="158"
-r="4"
-fill="#34231e"/>
-
-<circle cx="535"
-cy="158"
-r="4"
-fill="#34231e"/>
-
-<!-- student smile -->
-
-<path d="M485 184
-Q510 202 535 184"
-fill="none"
-stroke="#713f3a"
-stroke-width="4"
-stroke-linecap="round"/>
-
-
-<!-- teacher arm -->
+<path d="M485 184 Q510 202 535 184"
+fill="none" stroke="#713f3a"
+stroke-width="4" stroke-linecap="round"/>
 
 <path d="M335 285
 C385 260 435 240 490 220"
-fill="none"
-stroke="#bd7a66"
-stroke-width="23"
-stroke-linecap="round"/>
-
-<!-- student hand -->
+fill="none" stroke="#bd7a66"
+stroke-width="23" stroke-linecap="round"/>
 
 <path d="M420 310
 C380 290 350 280 320 275"
-fill="none"
-stroke="#bd7a66"
-stroke-width="18"
-stroke-linecap="round"/>
+fill="none" stroke="#bd7a66"
+stroke-width="18" stroke-linecap="round"/>
 
-<!-- books between them -->
+<rect x="300" y="345" width="190" height="27"
+rx="7" fill="#d9a2b3"/>
 
-<rect x="300"
-y="345"
-width="190"
-height="27"
-rx="7"
-fill="#d9a2b3"/>
-
-<rect x="320"
-y="317"
-width="170"
-height="27"
-rx="7"
-fill="#c3a5d5"/>
-
-<!-- heart -->
+<rect x="320" y="317" width="170" height="27"
+rx="7" fill="#c3a5d5"/>
 
 <path d="M390 78
 C370 48 330 66 345 98
@@ -540,34 +406,20 @@ L435 98
 C450 66 410 48 390 78Z"
 fill="#d9809a"/>
 
-<!-- stars -->
-
-<text x="90"
-y="390"
-font-size="35">✨</text>
-
-<text x="690"
-y="145"
-font-size="30">✨</text>
-
-<text x="635"
-y="210"
-font-size="25">✦</text>
+<text x="90" y="390" font-size="35">✨</text>
+<text x="690" y="145" font-size="30">✨</text>
+<text x="635" y="210" font-size="25">✦</text>
 
 </svg>
-
 </div>
 
 
 <div class="letter">
 
-<p>
-<b>Dear Yasmeen Ma'am,</b>
-</p>
+<p><b>Dear Yasmeen Ma'am,</b></p>
 
 <p>
-I don't think I've ever properly told you
-how special you are to me.
+I don't think I've ever properly told you how special you are to me.
 </p>
 
 <p>
@@ -575,43 +427,35 @@ You're my teacher, yes...
 </p>
 
 <p class="highlight">
-But somehow, you never made me feel like
-you were just my teacher.
+But somehow, you never made me feel like you were just my teacher.
 </p>
 
 <p>
 The way you talk to me so freely,
 the way I can share things with you,
-and the way we can talk about almost
-anything and everything...
+and the way we can talk about almost anything and everything...
 </p>
 
 <p>
-Sometimes it genuinely feels like
-I'm talking to a friend. 🤍
+Sometimes it genuinely feels like I'm talking to a friend. 🤍
 </p>
 
 <p>
-And Ma'am, I don't think you realise
-how much that means to me.
+And Ma'am, I don't think you realise how much that means to me.
 </p>
 
 <p>
-Sometimes it's something as simple as
-seeing your face in college.
+Sometimes it's something as simple as seeing your face in college.
 </p>
 
-<p>
-Or seeing that smile.
-</p>
+<p>Or seeing that smile.</p>
 
 <p class="highlight">
 Or just hearing your “Hi”.
 </p>
 
 <p>
-Somehow, that tiny little “Hi”
-can change my whole mood
+Somehow, that tiny little “Hi” can change my whole mood
 and make my day better.
 </p>
 
@@ -630,40 +474,292 @@ There's more... 🌷
 </button>
 
 </div>
-
 </section>
 
 
-<!-- SCREEN 5 -->
+<!-- SCREEN 5 : THINGS I NEVER SAY OUT LOUD -->
 
 <section class="screen hidden" id="screen5">
-
 <div class="card">
 
-<div class="heart">🥹🌷</div>
+<div class="flower">🌸</div>
 
-<h2>You became special without even knowing it.</h2>
+<h2>Things I Never Say Out Loud</h2>
+
+<p>
+Maybe these are little things...
+but they mean a lot to me.
+</p>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Your smile makes my day. ❤️</b></p>
+<p class="reveal">
+You probably don't even realise how much happiness it brings me.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Your “Hi” genuinely makes me happy. 🌷</b></p>
+<p class="reveal">
+It's such a small thing, but somehow it can completely change my mood.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>I feel comfortable talking to you. 🤍</b></p>
+<p class="reveal">
+I can be myself around you, and that is something I really value.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>I can share things with you without feeling judged. 🥹</b></p>
+<p class="reveal">
+That comfort is something not every teacher can give a student.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>You make college feel a little lighter. 🌸</b></p>
+<p class="reveal">
+Sometimes just seeing you is enough to make a normal college day better.
+</p>
+</div>
+
+<button onclick="go('screen5','screen6')">
+Okay Ma'am... now let's have some fun 😂
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 6 : CHOOSE ONE -->
+
+<section class="screen hidden" id="screen6">
+<div class="card">
+
+<div class="heart">😂❤️</div>
+
+<h2>Ma'am, Choose One!</h2>
+
+<p>
+Let's see what kind of answers you give 😂
+</p>
+
+<h3>Tea ☕ or Coffee ☕?</h3>
+
+<button class="choice" onclick="choice('Tea ☕')">Tea ☕</button>
+<button class="choice" onclick="choice('Coffee ☕')">Coffee ☕</button>
+
+<h3>5-minute talk or 2-hour talk? 😂</h3>
+
+<button class="choice" onclick="choice('5-minute talk')">5 minutes 😌</button>
+<button class="choice" onclick="choice('2-hour talk')">2 HOURS 😂</button>
+
+<h3>Serious conversation or random nonsense?</h3>
+
+<button class="choice" onclick="choice('Serious conversation')">
+Serious 🤓
+</button>
+
+<button class="choice" onclick="choice('Random nonsense')">
+Random nonsense 😂
+</button>
+
+<h3>Teacher mode 👩‍🏫 or Friend mode 🫶?</h3>
+
+<button class="choice" onclick="choice('Teacher mode')">
+Teacher 👩‍🏫
+</button>
+
+<button class="choice" onclick="choice('Friend mode')">
+Friend 🫶
+</button>
+
+<div id="choiceResult" class="result"></div>
+
+<button onclick="go('screen6','screen7')">
+Okayyy... next chapter 📖
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 7 : MEMORIES -->
+
+<section class="screen hidden" id="screen7">
+<div class="card">
+
+<div class="flower">📖🌷</div>
+
+<h2>Our Little College Memories</h2>
+
+<p>
+Maybe they look like ordinary moments...
+but I know I'll remember them.
+</p>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Chapter 1 — The Random Talks 💬</b></p>
+<p class="reveal">
+The conversations that started casually and somehow became something I looked forward to.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Chapter 2 — The Smiles 🌸</b></p>
+<p class="reveal">
+Those little smiles that made ordinary college days feel special.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Chapter 3 — The “Hi”s 👋</b></p>
+<p class="reveal">
+A tiny greeting that somehow had the power to make my entire day better.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Chapter 4 — The Little Things 🤍</b></p>
+<p class="reveal">
+The things you probably don't remember, but I quietly kept as memories.
+</p>
+</div>
+
+<div class="memory" onclick="this.classList.toggle('open')">
+<p><b>Chapter 5 — The Teacher Who Became A Friend ❤️</b></p>
+<p class="reveal">
+That's probably the chapter I will always be most grateful for.
+</p>
+</div>
+
+<button onclick="go('screen7','screen8')">
+There's something I want to promise... 🤍
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 8 : PROMISE -->
+
+<section class="screen hidden" id="screen8">
+<div class="card">
+
+<div class="flower">🤍</div>
+
+<div class="promise">
+
+<h2>One Little Promise, Ma'am...</h2>
+
+<p>
+Even when college ends and life gets busy,
+</p>
+
+<p>
+I hope I never become someone who forgets
+the people who made these years special.
+</p>
+
+<p class="highlight">
+And I promise I won't forget you.
+</p>
+
+<p>
+No matter where life takes me,
+you'll always be a beautiful part of my college memories.
+🌷
+</p>
+
+</div>
+
+<button onclick="go('screen8','screen9')">
+Maybe someday... 📸
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 9 : MAYBE SOMEDAY -->
+
+<section class="screen hidden" id="screen9">
+<div class="card">
+
+<div class="heart">📸🌷</div>
+
+<h2>Maybe Someday...</h2>
 
 <div class="letter">
 
 <p>
-There are some people we meet in life
-who leave a little warmth behind
-wherever they go.
+Maybe someday we'll look back at these college days
+and laugh about all the random conversations,
+the little moments, and the things that seemed
+so ordinary then.
+</p>
+
+<p>
+Maybe we'll remember the silly things,
+the serious conversations,
+the smiles,
+and all those tiny moments in between.
+</p>
+
+<p>
+And I'll probably look back and say:
+</p>
+
+<p class="big">
+“I'm really glad I got to have
+Yasmeen Ma'am as my teacher.” ❤️
+</p>
+
+</div>
+
+<button onclick="go('screen9','screen10')">
+After I graduate... 🎓
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 10 : AFTER GRADUATION -->
+
+<section class="screen hidden" id="screen10">
+<div class="card">
+
+<div class="flower">🎓🌷</div>
+
+<h2>After I Graduate...</h2>
+
+<div class="letter">
+
+<p>
+One day, I'll walk out of this college
+for the last time.
+</p>
+
+<p>
+I probably won't remember every lecture.
+</p>
+
+<p>
+I probably won't remember every assignment,
+every test, or every ordinary college day.
+</p>
+
+<p>
+But I'll remember the people who made
+those years special.
 </p>
 
 <p class="highlight">
-You're that person for me, Ma'am.
-</p>
-
-<p>
-You've made college feel a little happier,
-a little more comfortable,
-and a lot more memorable.
-</p>
-
-<p>
-Maybe one day I'll graduate and leave college.
+And you'll be one of the people I remember.
 </p>
 
 <p>
@@ -674,52 +770,63 @@ and move into another chapter.
 </p>
 
 <p>
-But I know there will always be
-a little part of me that remembers:
+But somewhere in all those new chapters,
+I'll still carry these memories with me.
 </p>
 
 <p class="big">
-“There was this one teacher who made me
-genuinely happy just by being there.” ❤️
-</p>
-
-<p>
-That's you, Ma'am.
-</p>
-
-<p>
-Thank you for talking to me like a friend.
-</p>
-
-<p>
-Thank you for letting me be myself around you.
-</p>
-
-<p>
-Thank you for listening.
-</p>
-
-<p>
-Thank you for all the little conversations
-that you probably don't even remember,
-but I do.
+And you'll always have a little place
+in those memories. 🤍
 </p>
 
 </div>
 
-<button onclick="go('screen5','screen6')">
-One last thing, Ma'am... 🤍
+<button onclick="go('screen10','screen11')">
+Uh-oh... final warning 😂
 </button>
 
 </div>
-
 </section>
 
 
-<!-- FINAL SCREEN -->
+<!-- SCREEN 11 : WARNING -->
 
-<section class="screen hidden" id="screen6">
+<section class="screen hidden" id="screen11">
+<div class="card">
 
+<div class="heart">⚠️😂❤️</div>
+
+<h2>WARNING!</h2>
+
+<p class="warning">
+This website contains:
+</p>
+
+<p class="warning">
+🌷 Excessive Ma'am appreciation
+<br>
+🥹 Emotional damage
+<br>
+❤️ Unnecessary amounts of love
+<br>
+😂 One overly attached student
+</p>
+
+<p class="big">
+Proceed at your own risk. 😂
+</p>
+
+<button onclick="go('screen11','screen12')">
+Okay, enough drama 😂
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 12 : ORIGINAL FINAL MESSAGE -->
+
+<section class="screen hidden" id="screen12">
 <div class="card">
 
 <div class="flower">🌷</div>
@@ -781,7 +888,6 @@ Love you always, Ma'am. 🌷
 </div>
 
 </div>
-
 </section>
 
 
@@ -789,83 +895,119 @@ Love you always, Ma'am. 🌷
 
 function go(current,next){
 
-document.getElementById(current)
-.classList.add("hidden");
+    document.getElementById(current).classList.add("hidden");
 
-document.getElementById(next)
-.classList.remove("hidden");
+    document.getElementById(next).classList.remove("hidden");
 
-document.getElementById(next)
-.classList.add("fade");
+    document.getElementById(next).classList.add("fade");
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 }
+
 
 function yesLove(){
 
-document.getElementById("loveResponse").innerHTML=`
+    document.getElementById("loveResponse").innerHTML=`
 
-<p>
-🥹❤️ Obviouslyyy!
-</p>
+        <p>🥹❤️ Obviouslyyy!</p>
 
-<p>
-But now comes the difficult question...
-</p>
+        <p>
+        But now comes the difficult question...
+        </p>
 
-<button onclick="go('screen2','screen3')">
-Okay, tell me how much... 🌷
-</button>
+        <button onclick="go('screen2','screen3')">
+        Okay, tell me how much... 🌷
+        </button>
 
-`;
-
+    `;
 }
+
 
 function noLove(){
 
-document.getElementById("loveResponse").innerHTML=`
+    document.getElementById("loveResponse").innerHTML=`
 
-<p>
-Ma'ammm... nice try. 😂
-</p>
+        <p>
+        Ma'ammm... nice try. 😂
+        </p>
 
-<p>
-I'm not accepting that answer.
-</p>
+        <p>
+        I'm not accepting that answer.
+        </p>
 
-<button onclick="go('screen2','screen3')">
-Try again ❤️
-</button>
+        <button onclick="go('screen2','screen3')">
+        Try again ❤️
+        </button>
 
-`;
-
+    `;
 }
+
 
 function chooseLove(){
 
-document.getElementById("amountResponse").innerHTML=`
+    document.getElementById("amountResponse").innerHTML=`
 
-<p>
-🥹❤️ Whatever answer you chose...
-</p>
+        <p>
+        🥹❤️ Whatever answer you chose...
+        </p>
 
-<p>
-I don't think there is really
-an option big enough.
-</p>
+        <p>
+        I don't think there is really
+        an option big enough.
+        </p>
 
-<p class="highlight">
-Now let me tell you why you're so special to me.
-</p>
+        <p class="highlight">
+        Now let me tell you why you're so special to me.
+        </p>
 
-<button onclick="go('screen3','screen4')">
-Read this, Ma'am... 🌷
-</button>
+        <button onclick="go('screen3','screen4')">
+        Read this, Ma'am... 🌷
+        </button>
 
+    `;
+}
+
+
+function choice(answer){
+
+    let message="";
+
+    if(answer==="Tea ☕"){
+        message="Tea it is! 😂 But honestly, I think our conversations are better than both tea and coffee. ❤️";
+    }
+
+    else if(answer==="Coffee ☕"){
+        message="Coffee it is! ☕😂 Now I know what to bring if I ever need a reason to talk to you.";
+    }
+
+    else if(answer==="5-minute talk"){
+        message="Ma'am... we both know 5 minutes somehow becomes much longer. 😂❤️";
+    }
+
+    else if(answer==="2-hour talk"){
+        message="I KNEW IT. 😂 Give us two hours and we'll probably talk about everything under the sun.";
+    }
+
+    else if(answer==="Serious conversation"){
+        message="Serious conversations with you are actually some of my favourite ones. 🤍";
+    }
+
+    else if(answer==="Random nonsense"){
+        message="YESSS 😂 Because somehow random nonsense becomes the best conversations.";
+    }
+
+    else if(answer==="Teacher mode"){
+        message="Teacher mode activated! 👩‍🏫 But somehow your friendly side always wins with me. ❤️";
+    }
+
+    else if(answer==="Friend mode"){
+        message="I knew you'd choose that! 🫶 Maybe that's why talking to you feels so easy.";
+    }
+
+    document.getElementById("choiceResult").innerHTML=message;
 }
 
 </script>
